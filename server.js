@@ -9,7 +9,7 @@ var express = require('express'),
     port = process.env.PORT || 8000,
     bodyParser = require('body-parser')
 
-var allowlist = ['http://localhost:4200']
+var allowlist = ['http://localhost:4200', 'http://192.168.100.233:4200']
 var corsOptionsDelegate = function (req, callback) {
     var corsOptions;
     if (allowlist.indexOf(req.header('Origin')) !== -1) {
